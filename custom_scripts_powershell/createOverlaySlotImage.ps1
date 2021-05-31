@@ -7,7 +7,6 @@ $overlayProgram = "createOverlays.exe"
 
 [xml]$xmlDoc = [xml] (Get-Content $xmlFileName)
 
-write-output $xmlDoc.InnerText
 $target = $xmlDoc.config.vmix.GetAttribute("working")
 
 $presetFile = "test.vmix"

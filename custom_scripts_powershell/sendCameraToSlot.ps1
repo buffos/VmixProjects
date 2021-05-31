@@ -2,7 +2,7 @@ $vmixURL = "http://127.0.0.1:8088/api"
 $xmlFileName = "${env:VMIX_SCRIPTS}\..\config.xml"
 $comma = "%2C"
 [xml]$xmlDoc = [xml] (Get-Content $xmlFileName)
-[xml]$vmixDoc = Invoke-WebRequest "http://127.0.0.1:8088/api"
+[xml]$vmixDoc = Invoke-WebRequest $vmixURL
 
 $working = $xmlDoc.config.vmix.GetAttribute("working")
 # get the input number on preview or program
@@ -19,7 +19,7 @@ if (!($currentSlotInput)) {
     Write-Output "Slot is Empty"
 }
 else {
-    Invoke-WebRequest "${vmixURL}?Function=SetMultiViewOverlay&Value=${slot},${camera}&Input=${inputNumber}"
+    Invoke-WebRequest "${vmixURL}?Function=SetMultiViewOverlay&Value=${slot},${camera}&Input=${inputNumber}" | Out-Null
 }
 
 

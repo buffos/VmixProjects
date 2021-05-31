@@ -14,27 +14,27 @@ Write-Output $selectedLayout
 if ($working -eq "active") {
     if ($currentState -eq "0") {
         # First send to preview
-        Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${selectedLayout}"
+        Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${selectedLayout}" | Out-Null
         # Set Transition Effect 2 as Merge
-        Invoke-WebRequest "${vmixURL}?Function=SetTransitionEffect2&Value=Merge"
+        Invoke-WebRequest "${vmixURL}?Function=SetTransitionEffect2&Value=Merge" | Out-Null
         # Execute Merge Transition
-        Invoke-WebRequest "${vmixURL}?Function=Transition2"
+        Invoke-WebRequest "${vmixURL}?Function=Transition2" | Out-Null
     }
     else {
         # first find the key of the input in the selected layer
         $key = $vmixDoc.SelectSingleNode("//inputs/input[@title='${selectedLayoutTitle}']/overlay[@index='${currentState}']").GetAttribute("key")
         $locateNumberFromKey = $vmixDoc.SelectSingleNode("//inputs/input[@key='${key}']").GetAttribute("number")
-        Invoke-WebRequest "${vmixURL}?Function=ActiveInput&Input=${selectedLayout}"
-        Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${locateNumberFromKey}"
+        Invoke-WebRequest "${vmixURL}?Function=ActiveInput&Input=${selectedLayout}" | Out-Null
+        Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${locateNumberFromKey}" | Out-Null
         # Set Transition Effect 2 as Merge
-        Invoke-WebRequest "${vmixURL}?Function=SetTransitionEffect2&Value=Merge"
+        Invoke-WebRequest "${vmixURL}?Function=SetTransitionEffect2&Value=Merge" | Out-Null
         # Execute Merge Transition
-        Invoke-WebRequest "${vmixURL}?Function=Transition2"
+        Invoke-WebRequest "${vmixURL}?Function=Transition2" | Out-Null
     }
 
 }
 else {
-    Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${selectedLayout}"
+    Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${selectedLayout}" | Out-Null
 }
 
-Invoke-WebRequest "${companionURL}/style/bank/3/25/?bgcolor=%23000000&text=State%20$($currentState)"
+Invoke-WebRequest "${companionURL}/style/bank/3/25/?bgcolor=%23000000&text=State%20$($currentState)" | Out-Null

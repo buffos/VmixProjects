@@ -7,8 +7,8 @@ $working = $xmlDoc.config.vmix.GetAttribute("working")
 $selectedCamera = $xmlDoc.config.vmix.GetAttribute("selected_camera")
 
 if ($working -eq "active") {
-    Invoke-WebRequest "${vmixURL}?Function=ActiveInput&Input=${selectedCamera}"
+    Invoke-WebRequest "${vmixURL}?Function=ActiveInput&Input=${selectedCamera}" | Out-Null
 }
 else {
-    Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${selectedCamera}"
+    Invoke-WebRequest "${vmixURL}?Function=PreviewInput&Input=${selectedCamera}" | Out-Null
 }
