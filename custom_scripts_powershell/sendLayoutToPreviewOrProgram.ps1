@@ -1,5 +1,5 @@
 $vmixURL = "http://127.0.0.1:8088/api"
-$xmlFileName = "D:\VmixProjects\config.xml"
+$xmlFileName = "${env:VMIX_SCRIPTS}\..\config.xml"
 [xml]$xmlDoc = [xml] (Get-Content $xmlFileName)
 [xml]$vmixDoc = Invoke-WebRequest $vmixURL
 

@@ -1,13 +1,13 @@
 # $attribute_name = $args[0]
 # $attribute_value = $args[1]
 # start /d "D:\VmixProjects\createOverlays_golang\" createOverlays.exe active test.vmix 3
-$xmlFileName = "D:\VmixProjects\config.xml"
-$workingDir = "D:\VmixProjects\createOverlays_golang\"
+$xmlFileName = "${env:VMIX_SCRIPTS}\..\config.xml"
+$workingDir = "${env:VMIX_SCRIPTS}\..\createOverlays_golang\"
 $overlayProgram = "createOverlays.exe"
 
-
-
 [xml]$xmlDoc = [xml] (Get-Content $xmlFileName)
+
+write-output $xmlDoc.InnerText
 $target = $xmlDoc.config.vmix.GetAttribute("working")
 
 $presetFile = "test.vmix"

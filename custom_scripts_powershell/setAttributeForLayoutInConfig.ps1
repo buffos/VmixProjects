@@ -1,6 +1,6 @@
 $attribute_name = "selected_title"
 $attribute_value = $args[0]
-$xmlFileName = "D:\VmixProjects\config.xml"
+$xmlFileName = "${env:VMIX_SCRIPTS}\..\config.xml"
 [xml]$xmlDoc = [xml] (Get-Content $xmlFileName)
 
 $previous_layout = $xmlDoc.config.vmix.GetAttribute($attribute_name)
