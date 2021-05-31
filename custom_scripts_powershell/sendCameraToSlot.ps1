@@ -19,7 +19,7 @@ if (!($currentSlotInput)) {
     Write-Output "Slot is Empty"
 }
 else {
-    Invoke-WebRequest "${vmixURL}?Function=SetMultiViewOverlay&Value=${slot}, ${camera}&Input=${inputNumber}"
+    Invoke-WebRequest "${vmixURL}?Function=SetMultiViewOverlay&Value=${slot},${camera}&Input=${inputNumber}"
 }
 
 

@@ -1,4 +1,4 @@
 <config>
-  <vmix working="active" selected_title="MULTI_2C_1M" selected_title_max="3" selected_title_min="1" selected_title_state="0" selected_slot="1" selected_camera="2">
+  <vmix working="active" selected_title="MULTI_2C_1M" selected_title_max="3" selected_title_min="1" selected_title_state="0" selected_slot="3" selected_camera="1">
   </vmix>
 </config>
