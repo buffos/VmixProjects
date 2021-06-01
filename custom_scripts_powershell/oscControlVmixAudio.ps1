@@ -14,7 +14,6 @@ $selectedAudioButton = $xmlDoc.config.vmixAudio.GetAttribute("selected")
 
 # Get all Audio inputs
 $audioInputs = $vmixDoc.SelectNodes("//inputs/input[starts-with(@title,'AUDIO')]")
-# Write-Output $audioInputs
 
 # remove old audio tags
 $xmlDoc.selectNodes("//vmixAudio/audio") | ForEach-Object { $_.ParentNode.RemoveChild($_) } | Out-Null
@@ -50,6 +49,25 @@ for ($i = 0; $i -lt $audioInputs.Count; $i++ ) {
 }
 
 # for the selected slot show M, A, B, C,  S, Follow buttons
+# MASTER BUTTON
+$masterColor = $audioInputs[$selectedAudioButton].audiobusses -like '*M*' ? ${colorSolo} : ${colorDefault}
+Invoke-WebRequest "${companionURL}/style/bank/4/10/?text=Master&bgcolor=${masterColor}" | Out-Null
+# BusA BUTTON
+$masterColor = $audioInputs[$selectedAudioButton].audiobusses -like '*A*' ? ${colorSolo} : ${colorDefault}
+Invoke-WebRequest "${companionURL}/style/bank/4/11/?text=BusA&bgcolor=${masterColor}" | Out-Null
+# BusB BUTTON
+$masterColor = $audioInputs[$selectedAudioButton].audiobusses -like '*B*' ? ${colorSolo} : ${colorDefault}
+Invoke-WebRequest "${companionURL}/style/bank/4/12/?text=BusB&bgcolor=${masterColor}" | Out-Null
+# BusC BUTTON
+$masterColor = $audioInputs[$selectedAudioButton].audiobusses -like '*C*' ? ${colorSolo} : ${colorDefault}
+Invoke-WebRequest "${companionURL}/style/bank/4/13/?text=BusC&bgcolor=${masterColor}" | Out-Null
+# Solo BUTTON
+$masterColor = $audioInputs[$selectedAudioButton].solo -eq 'True'  ? ${colorSolo} : ${colorDefault}
+Invoke-WebRequest "${companionURL}/style/bank/4/14/?text=Solo&bgcolor=${masterColor}" | Out-Null
+# Mute BUTTON
+$masterColor = $audioInputs[$selectedAudioButton].muted -eq 'True'  ? ${colorSolo} : ${colorDefault}
+Invoke-WebRequest "${companionURL}/style/bank/4/15/?text=Muted&bgcolor=${masterColor}" | Out-Null
+
 
 # # SELECTED SLOTS
 # $selectedSlot = [int]$xmlDoc.config.vmix.GetAttribute("selected_slot") + 9

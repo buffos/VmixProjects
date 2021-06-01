@@ -1,7 +1,8 @@
 <config>
   <vmix working="active" selected_title="MULTI_2C" selected_title_max="2" selected_title_min="1" selected_title_state="0" selected_slot="2" selected_camera="3">
   </vmix>
-  <vmixAudio selected="0">
+  <vmixAudio selected="2">
     <audio title="AUDIO_MIC_1" number="37" key="86dab9f2-e32e-4892-b041-f60fcb54c912" muted="True" solo="False" audiobusses="M,A" />
+    <audio title="AUDIO_MIC_2" number="38" key="7bcc3b98-3004-4f1f-98cd-e3468862596a" muted="True" solo="False" audiobusses="M" />
   </vmixAudio>
 </config>
