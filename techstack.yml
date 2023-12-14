@@ -1,11 +1,11 @@
 repo_name: buffos/VmixProjects
-report_id: c2c027cea71b7dc319ed333ad6b1ee0a
+report_id: e867e2215765c6065b21be0c7593555b
 repo_type: Public
-timestamp: '2023-11-09T12:15:44+00:00'
+timestamp: '2023-12-14T09:24:52+00:00'
 requested_by: buffos
 provider: github
 branch: main
-detected_tools_count: 4
+detected_tools_count: 8
 tools:
 - name: Golang
   description: An open source programming language that makes it easy to build simple,
@@ -28,6 +28,17 @@ tools:
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
   detection_source: Repo Metadata
+- name: pgvector
+  description: Open-source vector similarity search for Postgres
+  website_url: https://github.com/pgvector/pgvector/
+  open_source: false
+  hosted_saas: false
+  category: Data Stores
+  sub_category: Database Tools
+  image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source: createOvelays_python/Pipfile
+  last_updated_by: kostas.oraiopoulos
+  last_updated_on: 2021-05-31 11:16:09.000000000 Z
 - name: Git
   description: Fast, scalable, distributed revision control system
   website_url: http://git-scm.com/
@@ -37,6 +48,17 @@ tools:
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
   detection_source: Repo Metadata
+- name: LangChain
+  description: Build AI apps with LLMs through composability
+  website_url: https://github.com/hwchase17/langchain
+  open_source: true
+  hosted_saas: false
+  category: Communications
+  sub_category: Large Language Model Tools
+  image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source: createOvelays_python/Pipfile
+  last_updated_by: kostas.oraiopoulos
+  last_updated_on: 2021-05-31 11:16:09.000000000 Z
 - name: PowerShell
   description: A task automation and configuration management framework
   website_url: https://docs.microsoft.com/en-us/powershell/
@@ -46,3 +68,31 @@ tools:
   sub_category: Languages
   image_url: https://img.stackshare.io/service/3681/powershell-logo.png
   detection_source: Repo Metadata
+- name: freetype
+  description: The Freetype font rasterizer in the Go programming language
+  package_url: https://pkg.go.dev/github.com/golang/freetype
+  version: 0.0.0
+  license: Other
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/buffos/VmixProjects/blob/main/createOverlays_golang/go.sum
+  detection_source: createOverlays_golang/go.mod
+  last_updated_by: kostas.oraiopoulos
+  last_updated_on: 2021-05-31 11:16:09.000000000 Z
+- name: image
+  description: Go supplementary image libraries
+  package_url: https://pkg.go.dev/golang.org/x/image
+  version: 0.0.0
+  license: BSD-3-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: Go Modules Packages
+  image_url: https://img.stackshare.io/package/go-packages/image.png
+  detection_source_url: https://github.com/buffos/VmixProjects/blob/main/createOverlays_golang/go.sum
+  detection_source: createOverlays_golang/go.mod
+  last_updated_by: kostas.oraiopoulos
+  last_updated_on: 2021-05-31 11:16:09.000000000 Z
