@@ -1,7 +1,8 @@
 repo_name: buffos/VmixProjects
-report_id: e867e2215765c6065b21be0c7593555b
+report_id: c2c027cea71b7dc319ed333ad6b1ee0a
+version: 0.1
 repo_type: Public
-timestamp: '2023-12-14T09:24:52+00:00'
+timestamp: '2024-01-04T14:53:14+00:00'
 requested_by: buffos
 provider: github
 branch: main
@@ -17,6 +18,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/1005/O6AczwfV_400x400.png
+  detection_source_url: https://github.com/buffos/VmixProjects
   detection_source: Repo Metadata
 - name: Python
   description: A clear and powerful object-oriented programming language, comparable
@@ -27,6 +29,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/993/pUBY5pVj.png
+  detection_source_url: https://github.com/buffos/VmixProjects
   detection_source: Repo Metadata
 - name: pgvector
   description: Open-source vector similarity search for Postgres
@@ -36,6 +39,7 @@ tools:
   category: Data Stores
   sub_category: Database Tools
   image_url: https://img.stackshare.io/service/109221/default_b888cdf5617d936aa6aacf130911906955508639.png
+  detection_source_url: https://github.com/buffos/VmixProjects/blob/main/createOvelays_python/Pipfile
   detection_source: createOvelays_python/Pipfile
   last_updated_by: kostas.oraiopoulos
   last_updated_on: 2021-05-31 11:16:09.000000000 Z
@@ -47,6 +51,7 @@ tools:
   category: Build, Test, Deploy
   sub_category: Version Control System
   image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/buffos/VmixProjects
   detection_source: Repo Metadata
 - name: LangChain
   description: Build AI apps with LLMs through composability
@@ -56,6 +61,7 @@ tools:
   category: Communications
   sub_category: Large Language Model Tools
   image_url: https://img.stackshare.io/service/48790/default_5b6c6b73f1ff3775c85d2a1ba954cb87e30cbf13.jpg
+  detection_source_url: https://github.com/buffos/VmixProjects/blob/main/createOvelays_python/Pipfile
   detection_source: createOvelays_python/Pipfile
   last_updated_by: kostas.oraiopoulos
   last_updated_on: 2021-05-31 11:16:09.000000000 Z
@@ -67,6 +73,7 @@ tools:
   category: Languages & Frameworks
   sub_category: Languages
   image_url: https://img.stackshare.io/service/3681/powershell-logo.png
+  detection_source_url: https://github.com/buffos/VmixProjects
   detection_source: Repo Metadata
 - name: freetype
   description: The Freetype font rasterizer in the Go programming language
